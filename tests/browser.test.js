@@ -32,3 +32,16 @@ describe('Clicking "Pusha till stacken"', () => {
 		await alert.accept();
 	});
 });
+
+
+describe('Clicking "Poppa stacken!', () => {
+	it('alert box with text "Tog bort Bananer" should appear after clicking pop', async () => {
+		let pop = await driver.findElement(By.id('pop')); 
+		await pop.click();
+		let alert = await driver.switchTo().alert();    
+		const recived = await alert.getText();
+		const expected = "Bananer"; // Medvetet fel, ska vara 'Tog bort Bananer'
+		expect(recived).toEqual(expected);
+		await alert.accept();
+	})
+});
