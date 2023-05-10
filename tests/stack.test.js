@@ -28,7 +28,7 @@ test('pop each element of array', () => {
     
     expect(stack.pop()).toBe(5);
     expect(stack.pop()).toBe(4);
-    expect(stack.pop()).toBe(3); // Medvetet fel, ska vara 'tre'
+    expect(stack.pop()).toBe('tre'); // Åtgärdat fel
     expect(stack.pop()).toBe(2);
     expect(stack.pop()).toBe(1);
 

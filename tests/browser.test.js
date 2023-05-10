@@ -40,7 +40,7 @@ describe('Clicking "Poppa stacken!', () => {
 		await pop.click();
 		let alert = await driver.switchTo().alert();    
 		const recived = await alert.getText();
-		const expected = "Bananer"; // Medvetet fel, ska vara 'Tog bort Bananer'
+		const expected = "Tog bort Bananer"; // Åtgärdat fel
 		expect(recived).toEqual(expected);
 		await alert.accept();
 	})
